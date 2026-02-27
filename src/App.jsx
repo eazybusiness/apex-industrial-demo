@@ -17,8 +17,10 @@ function ScrollToTop() {
 }
 
 function App() {
+  const basename = import.meta.env.BASE_URL;
+  
   return (
-    <Router>
+    <Router basename={basename}>
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
