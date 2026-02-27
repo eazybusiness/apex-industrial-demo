@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
+  const logoSrc = `${import.meta.env.BASE_URL}logo.png`;
   const divisions = [
     { name: 'Precision Engineering', href: '/divisions#precision' },
     { name: 'Automation Systems', href: '/divisions#automation' },
@@ -15,7 +16,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <img src="/logo.png" alt="APEX Industrial Group" className="h-10 w-auto mb-4 brightness-0 invert" />
+            <img src={logoSrc} alt="APEX Industrial Group" className="h-10 w-auto mb-4 brightness-0 invert" />
             <p className="text-sm text-gray-300 leading-relaxed">
               Seit 1987 Ihr Partner für industrielle Exzellenz in Präzisionstechnik, Automation und Infrastruktur.
             </p>

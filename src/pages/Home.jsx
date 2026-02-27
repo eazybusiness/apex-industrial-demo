@@ -4,6 +4,7 @@ import DivisionCard from '../components/DivisionCard';
 import MetricCard from '../components/MetricCard';
 
 export default function Home() {
+  const heroSrc = `${import.meta.env.BASE_URL}hero.png`;
   const divisions = [
     {
       icon: Cog,
@@ -61,7 +62,7 @@ export default function Home() {
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/hero.png"
+            src={heroSrc}
             alt="APEX Industrial Excellence"
             className="w-full h-full object-cover"
           />

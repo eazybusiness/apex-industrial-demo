@@ -5,6 +5,7 @@ import { useState } from 'react';
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const logoSrc = `${import.meta.env.BASE_URL}logo.png`;
 
   const navigation = [
     { name: 'Startseite', href: '/' },
@@ -20,7 +21,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center space-x-3">
-            <img src="/logo.png" alt="APEX Industrial Group" className="h-12 w-auto" />
+            <img src={logoSrc} alt="APEX Industrial Group" className="h-12 w-auto" />
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
